@@ -76,6 +76,8 @@
 + MJSW   = 0.35 
 + PB     = 0.9 
 + PBSW   = 0.8 
+
+*** Unused parameters
 + FC     = 0.5 
 *** Gate Overlap Capacitances 
 + CGSO   = 1.5E-10 
