@@ -17,3 +17,5 @@ https://qucs.sourceforge.net/docs/report/EKV26.pdf
 Link to disciplines.vams and constants.vams file
 https://edadownload.software.keysight.com/eedl/ads/2011_01/pdf/verilogaref.pdf
 
+implementation in Genesys
+https://www.academia.edu/36811055/MOSFET_EKV_Verilog_A_Model_Implementation_in_Genesys
