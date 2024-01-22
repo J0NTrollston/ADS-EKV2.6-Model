@@ -10,7 +10,7 @@ Next, we will create a new schematic under the cell we created. Go ahead and add
 Below is a screenshot of what yours should look like. When this is complete, save and close the schematic.
 
 %% schematic layout image %%
-![alt text]([http://url/to/img.png](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/Images/SchematicLayout.png))
+![Test Image 1]([http://url/to/img.png](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/Images/SchematicLayout.png))
 
 Under the same cell, create a new symbol. A Symbol Generator box will pop up, click okay and modify the symbol to look like an N-Type MOSFET.
 Below is an example of what yours should look like. Save and close the symbol view once this is complete.
