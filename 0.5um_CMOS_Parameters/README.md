@@ -1,3 +1,5 @@
+# Advanced Design System (ADS) EKV v2.6 Model Tutorial
+
 Using the 0.5um EKV Model in ADS
 
 As we will be using both nmos and pmos, we need to create 2 models. Let's first focus on the NMOS Model as the steps will essentially be the same.
@@ -9,16 +11,13 @@ Create a new cell named "nmos_ekv_va" and paste the code located %%insert link t
 Next, we will create a new schematic under the cell we created. Go ahead and add 4 pins and place them on the schematic view. These pin names will need to match what are used in the nmos_ekv_va.va file (d,g,s,b).
 Below is a screenshot of what yours should look like. When this is complete, save and close the schematic.
 
-%% schematic layout image %%
-![Test Image 1]([http://url/to/img.png](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/Images/SchematicLayout.png))
-
-
 ![Schematic](Images/SchematicLayout.png)
 
 Under the same cell, create a new symbol. A Symbol Generator box will pop up, click okay and modify the symbol to look like an N-Type MOSFET.
 Below is an example of what yours should look like. Save and close the symbol view once this is complete.
 
 %% show example of nmos symbol %%
+![p2](Images/nmos_symbol.png)
 
 Now that we have all 3 files created, right click on the veriloga file we created initially and click Compile Verilog.
 You should get a message stating that the code was compiled without errors. To confirm this, open the symbol view we created and navigate to File -> Design Parameters
@@ -26,6 +25,7 @@ You should get a message stating that the code was compiled without errors. To c
 The image below is what your Definition window should look like. Using the VerilogA file, ADS will pull the parameters used and save them for you.
 Click OK on the Definition window to close.
 %% nmos parameter view %%
+![p2](Images/nmos_design_parameters.png)
 
 
 
@@ -36,10 +36,12 @@ Create a new cell named pmos_ekv_va and paste the code %% code link for pmos va 
 Save and then create the schematic and symbol views. The symbol for your pmos model should look the same as below.
 
 %% pmos symbol %%
+![p3](Images/pmos_symbol.png)
 
 Once the pmos cell contains the 3 files as well, go ahead and compile the veriloga code and check the design parameters. Below is what the Definition window should look like.
 Click OK and now you have your CMOS models created. Next let's test them out.
 %% pmos Definition window of parameters %%
+![p4](Images/pmos_design_parameters.png)
 
 Simulating your models:
 
@@ -49,6 +51,7 @@ In the schematic view, navigate to the Component Library Icon and under Workspac
 Next you will need to add the following components shown in the figure below. All required variables are displayed.
 
 %% show sim layout of nmos %%
+![p5](Images/pmos_sim_1.png)
 
 Once your simulation schematic looks like the one shown, you will need to complete one more step. Currently, the nmos schematic you placed down is an instance. This means you will need to reference the model before simulation.
 Select the nmos instance on the schematic and Choose View for Simulation from the top ribbon. You will need to choose the veriloga file to use for simulation.
@@ -56,17 +59,25 @@ Select the nmos instance on the schematic and Choose View for Simulation from th
 Your schematic should now have the text "veriloga" above the nmos if done correctly as shown below.
 
 %% nmos simulation veriloga %%
+![p6](Images/nmos_sim_1.png)
 
 
 Save and click simulate. You will want to plot the Drain Current vs the Voltage from Drain to Source (i.e. I_D vs V_DS)
 
 %% show curve for nmos %%
+![p7](Images/plot_nmos_IvsVDS.png)
 
 We will do the same for the pmos simulation, rename your cell accordingly and replicate the schematic simulation below.
 
 %% schematic for pmos simulaiton %%
+![p8](Images/plot_pmos_IvsVDS.png)
 
 
-
-
+# Simulate Inverter section
 Later, I will add this section for the CMOS inverter using both models that we created. 
+![p9](Images/CMOS_Inverter_Schematic.png)
+![p9](Images/CMOS_Inverter_VoutVsVin.png)
+
+
+
+# References
