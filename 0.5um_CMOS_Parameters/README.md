@@ -140,10 +140,10 @@ Creating the P-Type Model will be mostly the same steps.
 >    After this step, you will have fully created your P-Type EKV v2.6 MOSFET Model
 
 ### What about the values used in the Models?
+Using the FOSS EKV Model[^2] Verilog-A code, I started off with their default values for my parameters. Using the 0.5um parameter set from EFPL, I updated the default values to reflect the half micron technology that was to be simulated. The EFPL parameters[^1] did not contain all of the parameters found in the Verilog-A code but it did cover the more important values for any model. Below is a table that will show the source of the value used in my model. Lastly, there were some other external resources for some of the parameters which have listes sources.
 
 
-
-| Parameter Name | FOSS Model[^2] | EFPL[^1] | Parameter Name | FOSS Model[^2] | EFPL[^1] | Other | Parameter Name | FOSS Model[^2] | EFPL[^1] | Parameter Name | FOSS Model[^2] | EFPL[^1] | Other |
+| Parameter Name | FOSS Model | EFPL | Parameter Name | FOSS Model | EFPL | Other | Parameter Name | FOSS Model | EFPL | Parameter Name | FOSS Model | EFPL | Other |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |	TYPE	|	x	|		|	HDIF	|		|	x	|		|	PHI	|		|	x	|	xd_gmin	|		|		|	SIMetrix[^5]	|
 |	Noise	|	x	|		|	AVTO	|	x	|		|		|	KP	|		|	x	|	xd_xjbv	|	x	|		|		|
@@ -164,17 +164,6 @@ Creating the P-Type Model will be mostly the same steps.
 |	VTO	|		|	x	|	xd_cj	|		|	x	|		|	IBBT	|		|	x	|	tp_njts	|	x	|		|		|
 |	TCV	|		|	x	|	xd_cjsw	|		|	x	|		|	IBN	|		|	x	|	tp_njtssw	|	x	|		|		|
 |	GAMMA	|		|	x	|	xd_cjswg	|		|		|	Altium[^4]	|	RSH	|		|	x	|	tp_njtsswg	|	x	|		|		|
-
-
-
-
-
-
-
-
-
-
-
 
 # Simulation of the Models
 
