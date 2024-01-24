@@ -72,7 +72,7 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >
 > 4. Once the Definition Window opens, you should see a list of parameters. Using the Verilog-A file, ADS will pull the parameters used and save them for you.
 >
->    ![p2](Images/nmos_design_parameters.png)
+>    ![Design Parameters NMOS](Images/nmos_design_parameters.png)
 > 
 > 6. Click *Apply* on the Definition Window and then Save and Close the Symbol Window.
 >    After this step, you will have fully created your N-Type EKV v2.6 MOSFET Model
@@ -117,48 +117,27 @@ Creating the P-Type Model will be mostly the same steps.
 >
 >    For aesthetic reasons, you can set your line to "*Thick*"
 >
->    ![N-Type MOSFET Symbol](Images/nmos_symbol.png)
+>    ![P-Type MOSFET Symbol](Images/pmos_symbol.png)
 >
->    Once your NMOS Symbol looks the same, you can Save and Exit
+>    Once your PMOS Symbol looks the same, you can Save and Exit
 
 7. Now that we have all 3 files created, we need to compile our Verilog-A code.
 > 1. Right Click on the Verilog-A file we created initially and Click Compile Verilog.
 >     
->    ![Compile nmos Verilog-A](Images/Compile_nmos_veriloga.png)
+>    ![Compile pmos Verilog-A](Images/Compile_pmos_veriloga.png)
 >
 >    You should get a pop up box stating that the code was compiled without errors.
 >    
 > 3. To confirm that the model is using the given parameters, open the Symbol file we created and navigate to *File* -> *Design Parameters*
 >
->    ![NMOS Design Parameter Selection](Images/nmos_file_design_parameters.png)
+>    ![PMOS Design Parameter Selection](Images/pmos_file_design_parameters.png)
 >
 > 4. Once the Definition Window opens, you should see a list of parameters. Using the Verilog-A file, ADS will pull the parameters used and save them for you.
 >
->    ![p2](Images/nmos_design_parameters.png)
+>    ![Design Parameters PMOS](Images/pmos_design_parameters.png)
 > 
 > 6. Click *Apply* on the Definition Window and then Save and Close the Symbol Window.
->    After this step, you will have fully created your N-Type EKV v2.6 MOSFET Model
->    Now you may move on to the P-Type Model
-
-
-
-
-
-
-For the P-Type Model, most of the steps will be the same. You can use the same steps from the 
-
-Create a new cell named pmos_ekv_va and paste the code %% code link for pmos va file%% in a new veriloga file.
-Save and then create the schematic and symbol views. The symbol for your pmos model should look the same as below.
-
-%% pmos symbol %%
-
-![p3](Images/pmos_symbol.png)
-
-Once the pmos cell contains the 3 files as well, go ahead and compile the veriloga code and check the design parameters. Below is what the Definition window should look like.
-Click OK and now you have your CMOS models created. Next let's test them out.
-%% pmos Definition window of parameters %%
-
-![p4](Images/pmos_design_parameters.png)
+>    After this step, you will have fully created your P-Type EKV v2.6 MOSFET Model
 
 ### What about the values used in the Models?
 
