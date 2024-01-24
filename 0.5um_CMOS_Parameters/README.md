@@ -59,7 +59,6 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >
 >    Once your NMOS Symbol looks the same, you can Save and Exit
 
-
 7. Now that we have all 3 files created, we need to compile our Verilog-A code.
 > 1. Right Click on the Verilog-A file we created initially and Click Compile Verilog.
 >     
@@ -76,26 +75,10 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >    ![p2](Images/nmos_design_parameters.png)
 > 
 > 6. Click *Apply* on the Definition Window and then Save and Close the Symbol Window.
+>    After this step, you will have fully created your N-Type EKV v2.6 MOSFET Model
+>    Now you may move on to the P-Type Model
 
 ## P-Type MOSFET Model
-
-# Simulation of the Models
-
-## N-Type MOSFET Simulation
-
-## P-Type MOSFET Simulation
-
-# Creating a simple Inverter
-
-
-Using the 0.5um EKV Model in ADS
-
-As we will be using both nmos and pmos, we need to create 2 models. Let's first focus on the NMOS Model as the steps will essentially be the same.
-
-
-
-
-
 PMOS Model:
 I will quickly go over the PMOS Model as most of the steps are the same
 
@@ -103,21 +86,28 @@ Create a new cell named pmos_ekv_va and paste the code %% code link for pmos va 
 Save and then create the schematic and symbol views. The symbol for your pmos model should look the same as below.
 
 %% pmos symbol %%
+
 ![p3](Images/pmos_symbol.png)
 
 Once the pmos cell contains the 3 files as well, go ahead and compile the veriloga code and check the design parameters. Below is what the Definition window should look like.
 Click OK and now you have your CMOS models created. Next let's test them out.
 %% pmos Definition window of parameters %%
+
 ![p4](Images/pmos_design_parameters.png)
 
-Simulating your models:
+### What about the values used in the Models?
 
+
+# Simulation of the Models
+
+## N-Type MOSFET Simulation
 In order to simulate our models, we will need to create a new cell. Create a new schematic and in the cell box, rename your cell to "nmos_ekv_va_SIM"
 In the schematic view, navigate to the Component Library Icon and under Workspace Libraries you will need to choose "nmos_ekv_va". Place the model in the schematic.
 
 Next you will need to add the following components shown in the figure below. All required variables are displayed.
 
 %% show sim layout of nmos %%
+
 ![p5](Images/pmos_sim_1.png)
 
 Once your simulation schematic looks like the one shown, you will need to complete one more step. Currently, the nmos schematic you placed down is an instance. This means you will need to reference the model before simulation.
@@ -126,25 +116,34 @@ Select the nmos instance on the schematic and Choose View for Simulation from th
 Your schematic should now have the text "veriloga" above the nmos if done correctly as shown below.
 
 %% nmos simulation veriloga %%
+
 ![p6](Images/nmos_sim_1.png)
 
 
 Save and click simulate. You will want to plot the Drain Current vs the Voltage from Drain to Source (i.e. I_D vs V_DS)
 
 %% show curve for nmos %%
+
 ![p7](Images/plot_nmos_IvsVDS.png)
 
+## P-Type MOSFET Simulation
 We will do the same for the pmos simulation, rename your cell accordingly and replicate the schematic simulation below.
 
 %% schematic for pmos simulaiton %%
+
 ![p8](Images/plot_pmos_IvsVDS.png)
 
 
-# Simulate Inverter section
+# Creating a simple Inverter
+## Create Inverter Schematic
+## Simulate Inverter section
 Later, I will add this section for the CMOS inverter using both models that we created. 
+
 ![p9](Images/CMOS_Inverter_Schematic.png)
+
 ![p9](Images/CMOS_Inverter_VoutVsVin.png)
 
 
+
 [^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
-[^2]: [EFPL CMOS 0.5um Parameter Set](https://github.com/ekv26/model)
+[^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
