@@ -142,6 +142,40 @@ Creating the P-Type Model will be mostly the same steps.
 ### What about the values used in the Models?
 
 
+
+| Parameter Name | FOSS Model[^2] | EFPL[^1] | Parameter Name | FOSS Model[^2] | EFPL[^1] | Other | Parameter Name | FOSS Model[^2] | EFPL[^1] | Parameter Name | FOSS Model[^2] | EFPL[^1] | Other |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|	TYPE	|	x	|		|	HDIF	|		|	x	|		|	PHI	|		|	x	|	xd_gmin	|		|		|	SIMetrix[^5]	|
+|	Noise	|	x	|		|	AVTO	|	x	|		|		|	KP	|		|	x	|	xd_xjbv	|	x	|		|		|
+|	Trise	|	x	|		|	AKP	|	x	|		|		|	BEX	|		|	x	|	xd_bv	|	x	|		|		|
+|	Temp	|	x	|		|	AGAMMA	|	x	|		|		|	THETA	|	x	|		|	xd_njts	|	x	|		|		|
+|	TEMP	|	x	|		|	AF	|		|	x	|		|	E1	|		|	x	|	xd_njtssw	|	x	|		|		|
+|	TNOM	|		|	x	|	KF	|		|	x	|		|	UCRIT	|		|	x	|	xd_njtsswg	|	x	|		|		|
+|	L	|		|	x	|	xd_n	|		|	x	|		|	UCEX	|		|	x	|	xd_vts	|	x	|		|		|
+|	W	|		|	x	|	xd_js	|		|	x	|		|	LAMBDA	|		|	x	|	xd_vtssw	|	x	|		|		|
+|	M	|	x	|		|	xd_jsw	|		|	x	|		|	DL	|		|	x	|	xd_vtsswg	|	x	|		|		|
+|	NS	|	x	|		|	xd_jswg	|	x	|		|		|	DW	|		|	x	|	tp_xti	|		|	x	|		|
+|	AS	|	x	|		|	xd_mj	|		|	x	|		|	WETA	|		|	x	|	tp_cj	|	x	|		|		|
+|	AD	|	x	|		|	xd_mjsw	|		|	x	|		|	LETA	|		|	x	|	tp_cjsw	|	x	|		|		|
+|	PS	|	x	|		|	xd_mjswg	|		|		|	Altium[^4]	|	Q1	|		|	x	|	tp_cjswg	|	x	|		|		|
+|	PD	|	x	|		|	xd_pb	|		|	x	|		|	LK	|		|	x	|	tp_pb	|	x	|		|		|
+|	COX	|		|	x	|	xd_pbsw	|		|	x	|		|	IBA	|		|	x	|	tp_pbsw	|	x	|		|		|
+|	XJ	|		|	x	|	xd_pbswg	|		|		|	Altium[^4]	|	IBB	|		|	x	|	tp_pbswg	|	x	|		|		|
+|	VTO	|		|	x	|	xd_cj	|		|	x	|		|	IBBT	|		|	x	|	tp_njts	|	x	|		|		|
+|	TCV	|		|	x	|	xd_cjsw	|		|	x	|		|	IBN	|		|	x	|	tp_njtssw	|	x	|		|		|
+|	GAMMA	|		|	x	|	xd_cjswg	|		|		|	Altium[^4]	|	RSH	|		|	x	|	tp_njtsswg	|	x	|		|		|
+
+
+
+
+
+
+
+
+
+
+
+
 # Simulation of the Models
 
 ## N-Type MOSFET Simulation
@@ -192,3 +226,5 @@ Later, I will add this section for the CMOS inverter using both models that we c
 [^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
 [^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
 [^3]: [EFPL EKV Examples](https://www.epfl.ch/labs/iclab/ekv/verilog-a/)
+[^4]: [Altium Parameter Reference](https://techdocs.altium.com/display/AMSE/Metal+Oxide+Semiconductor+Field-Effect+Transistor+(MOSFET)+Model)
+[^5]: [GMIN parameter](https://web.eece.maine.edu/~hummels/classes/ece342/docs/simetrix_simulatorreference.pdf)
