@@ -18,7 +18,8 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >    ![Create New Celll](Images/Create_New_Cell.png)
 >
 > 2. Name the cell "*nmos_ekv_va*" and click *OK*
-> 3. Once the Verilog-A file is created unde the cell named *nmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A NMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va) into the Verilog-A file. Save and Exit.
+
+> 4. Once the Verilog-A file is created unde the cell named *nmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A NMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va) into the Verilog-A file. Save and Exit.
 
 3. Next, we will create a Schematic under the *nmos_ekv_va* cell.
 > 1. Right Click on the *nmos_ekv_va* cell and choose "*New Schematic*"
@@ -43,19 +44,39 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >
 >    Click Save and Exit
 
-Under the same cell, create a new symbol. A Symbol Generator box will pop up, click okay and modify the symbol to look like an N-Type MOSFET.
-Below is an example of what yours should look like. Save and close the symbol view once this is complete.
+6. The last file we will need to create is the Symbol for the *nmos_ekv_va* cell.
+> 1. Right Click on the *nmos_ekv_va* cell and choose "*New Layout*"
+> 2. A window will open, verify that in the Cell naming box it contains "*nmos_ekv_va*"
+> 3. Click *OK*
+> 4. Another window will pop up showing you different ways to change your pin setup. You don't need to change the settings and can Click *OK*
+> 5. You will need to create the N-Type MOSFET Symbol. Use the Thick Line Tool and rotate the 4 pins to complete the Symbol.
+>
+>    ![Line Tool](Images/Line_Tool.png)
+>
+>    For aesthetic reasons, you can set your line to "*Thick*"
+>
+>    ![N-Type MOSFET Symbol](Images/nmos_symbol.png)
+>
+>    Once your NMOS Symbol looks the same, you can Save and Exit
 
-%% show example of nmos symbol %%
-![p2](Images/nmos_symbol.png)
 
-Now that we have all 3 files created, right click on the veriloga file we created initially and click Compile Verilog.
-You should get a message stating that the code was compiled without errors. To confirm this, open the symbol view we created and navigate to File -> Design Parameters
+7. Now that we have all 3 files created, we need to compile our Verilog-A code.
+> 1. Right Click on the Verilog-A file we created initially and Click Compile Verilog.
+>     
+>    ![Compile nmos Verilog-A](Images/Compile_nmos_veriloga.png)
+>
+>    You should get a pop up box stating that the code was compiled without errors.
+>    
+> 3. To confirm that the model is using the given parameters, open the Symbol file we created and navigate to *File* -> *Design Parameters*
+>
+>    ![NMOS Design Parameter Selection](Images/nmos_file_design_parameters.png)
+>
+> 4. Once the Definition Window opens, you should see a list of parameters. Using the Verilog-A file, ADS will pull the parameters used and save them for you.
+>
+>    ![p2](Images/nmos_design_parameters.png)
+> 
+> 6. Click *Apply* on the Definition Window and then Save and Close the Symbol Window.
 
-The image below is what your Definition window should look like. Using the VerilogA file, ADS will pull the parameters used and save them for you.
-Click OK on the Definition window to close.
-%% nmos parameter view %%
-![p2](Images/nmos_design_parameters.png)
 ## P-Type MOSFET Model
 
 # Simulation of the Models
