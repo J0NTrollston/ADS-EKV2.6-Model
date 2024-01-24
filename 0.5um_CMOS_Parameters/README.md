@@ -11,16 +11,37 @@ This section will contain information on how to build the NMOS and PMOS model wi
 
 ## N-Type MOSFET Model
 1. Open ADS and navigate to a new workspace, you can use any name for this workspace.
-> 1. In your newly created workspace, we will need to first add the Verilog-A code to a new cell.   
->   To do this, navigate to *File* -> *New* -> *VerilogA New*
->   ![Create New Celll](Images/Create_New_Cell.png)
 
-Create a new cell named "nmos_ekv_va" and paste the code located [Verilog-A NMOS](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va)
+2.  In your newly created workspace, we will need to first add the Verilog-A code to a new cell.   
+> 1. To do this, navigate to *File* -> *New* -> *VerilogA New*
+>
+>    ![Create New Celll](Images/Create_New_Cell.png)
+>
+> 2. Name the cell "*nmos_ekv_va*" and click *OK*
+> 3. Once the Verilog-A file is created unde the cell named *nmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A NMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va) into the Verilog-A file. Save and Exit.
 
-
-Next, we will create a new schematic under the cell we created. Go ahead and add 4 pins and place them on the schematic view. These pin names will need to match what are used in the nmos_ekv_va.va file (d,g,s,b).
-Below is a screenshot of what yours should look like. When this is complete, save and close the schematic.
-![Schematic](Images/SchematicLayout.png)
+3. Next, we will create a Schematic under the *nmos_ekv_va* cell.
+> 1. Right Click on the *nmos_ekv_va* cell and choose "*New Schematic*"
+> 2. A window will open, verify that in the Cell naming box it contains "*nmos_ekv_va*"
+> 3. Click *OK*
+> 4. In the new window, navigate to the top ribbon and click on the *Insert Pin* box. Our model uses 4 pins labeled *d*, *g*, *s*, and *b* so we will need to add 4 of these pins.
+>
+>    ![Insert Pin](Images/Insert_Pin.png)
+>
+>    While placing these down, you can use the rotate button on the same tool ribbon.
+>
+>    ![Rotate Tool](Images/Rotate_Tool.png)
+>    
+>    After placing your pins down, you will need to name them with respect to how they are named in the Verilog-A file. The Verilog-A code declares the model [(Code Line Reference)](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/18412c61c6d320f61304ae781417ded005d9e792/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va#L110C1-L110C29) as "*module nmos_ekv_va(d,g,s,b);*" meaning we will need to name the pins the exact same way. We can do this by Double Clicking one of the pins you placed down to go into edit mode. For example, below is how the "*g*" pin's edit window should look like.
+>
+>    ![Edit Pin g](Images/Edit_Pin_g.png)
+>
+>    
+> 5. Once the 4 pins are added, your Schematic should only have 4 pins named *d*, *g*, *s*, and *b*.
+> 
+>    ![Schematic](Images/SchematicLayout.png)
+>
+>    Click Save and Exit
 
 Under the same cell, create a new symbol. A Symbol Generator box will pop up, click okay and modify the symbol to look like an N-Type MOSFET.
 Below is an example of what yours should look like. Save and close the symbol view once this is complete.
