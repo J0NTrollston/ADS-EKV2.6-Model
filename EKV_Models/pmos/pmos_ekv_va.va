@@ -107,7 +107,7 @@ enddiscipline
 // AB 040902
 `define NOT_GIVEN -1.0e21
 `define DEFAULT_TNOM 25
-module nmos_ekv_va(d,g,s,b);
+module pmos_ekv_va(d,g,s,b);
     // %%DEVICE_CLASS=MOS(NMOS:TYPE=1,PMOS:TYPE=-1)%%
     //  Node definitions
     inout           d,g,s,b;         // external nodes
