@@ -332,6 +332,7 @@ Now that we have created two models for the EKV MOSFET, we will want to verify t
 >
 >    ![PMOS Curve](Images/plot_pmos_IvsVDS.png)
 
+### References:
 [^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
 [^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
 [^3]: [EFPL EKV Examples](https://www.epfl.ch/labs/iclab/ekv/verilog-a/)
