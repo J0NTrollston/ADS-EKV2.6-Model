@@ -248,20 +248,89 @@ Now that we have created two models for the EKV MOSFET, we will want to verify t
 >    You will see a plot for I_D vs VDS for different values of VGS. If you have the same results below then you are finished with the NMOS Simulaton
 >
 >    ![NMOS Curve](Images/plot_nmos_IvsVDS.png)
-
-
-
+>
+>    Now we will do the same simulation but for the PMOS Model.
 
 ## P-Type MOSFET Simulation
-We will do the same for the pmos simulation, rename your cell accordingly and replicate the schematic simulation below.
+1. In the same workspace where we created our models, you will want to create a new cell to simulate the P-Type MOSFET Model.
+> 1. In the workspace window, navigate to *File* -> *New* -> *Schematic* and in the New Schematic Window you will want to name the cell "*pmos_ekv_va_SIM*"
+>
+>    ![New Schematic](Images/New_Schematic.png) 
 
-%% schematic for pmos simulaiton %%
+2. When the Schematic opens, we will need to place down our PMOS Model with simulation components.
+> 1. Click on the Display Component Library List on the top ribbon to grab the PMOS Model.
+>
+>    ![Display Component Library List](Images/Display_Component_Library_List.png)
+>
+>    This will open a Component Library Window which will have all of your libraries available in your Workspace. On the left, you will see a dropdown menu called *All Libraries*. If not already expanded, open this dropdown menu and Click on *Workspace Libraries*.
+>    To the right you will see the models create earier. Double Click on the Component called *pmos_ekv_va* and place it down within the Schematic.
+>
+> 2. Now we will use the Palette to grab some needed simulation components. First grab the Current Probe by searching in the Probe Component Palette.
+>
+>    ![Current Probe](Images/Probe_Components.png)
+>
+>    You will see the first component called *I_Probe*, go ahead and select this and place it down.
+>    
+>    ![I Probe](Images/I_Probe.png)
+>    
+> 3. Go to the *Sources-Freq Domain* Palette and grab the 2 *V_DC* Components.
+>
+>    ![Sources-Freq Domain](Images/Sources_Freq_Domain.png)
+>
+> 4. Go to the *Simulation-DC* Palette and grab the *D C* and the *Prm Swp* Components.
+>
+>    ![DC Simulation](Images/Simulation_DC.png)
+>
+>    After you placed both Components, Double Click the DC Component and Open the Display Tab. Here is where you can choose what parameters are displayed on the Schematic. Choose *SweepVar*, *Start*, *Stop* and *Step*.
+>
+>    ![DC Display](Images/DC_Display.png)
+>
+>    Click *OK*
+>
+> 6. There are some other items that we will need such as the *Ground* and *VAR* Components.
+>    You will need one *Ground* Component
+>    
+>    ![Ground Component](Images/Ground_Component.png)
+>
+>    And you will need one *VAR* Component
+>
+>    ![VAR Component](Images/VAR_Component.png)
+>
+> 7. Now to connect these Components together, you will need to use the Wire Tool
+>    This will be on the top ribbon next to the VAR and Ground Components used.
+>    
+>    ![Wire Tool](Images/Wire_Tool.png)
+>
+> 8. Before we are ready to put components all together, we need to choose the view for simulating our MOSFET.
+>    Select the PMOS Model within the Schematic and on the top ribbon you will need to Click *View For Simulation*.
+>
+>    ![View For Simulation](Images/View_For_Simulation.png)
+>
+>    When the Simulation View Window pops up, you will want to Select the *veriloga* View. This is how we tie the Model we created to our Instance within the Schematic. Once selected, you will see the text "*veriloga*" on top of the PMOS Instance.
 
-![p5](Images/pmos_sim_1.png)
+2. Now that we have everything we need, let's put everything together and add assign values.
+> 1. Below is how your Schematic should look like. Notice for the *DC* and *Parameter Sweep* you will need double quotes around your variables. The VAR Component holds the starting values of *VGS* and *VDS*. Notice I changed my variable name for the current to "*I0*" but this is not required.
+> 
+>    ![PMOS Simulation Schematic](Images/pmos_sim_1.png)
 
-![p8](Images/plot_pmos_IvsVDS.png)
-
-
+3. With the Components tied together and ready for simulation, let's plot the Drain Current versus the Drain-to-Source Voltage.
+> 1. Click the Simulate Tool located on the top ribbon
+>
+>    ![Simulate](Images/Simulate.png)
+>
+>    After a couple of seconds, you will see 2 Windows open. As long as ther are no error messages or warnings, you may ignore the Logging Window. We will instead focus on the second window to plot our graph.
+>
+> 2. On the left in the Palette, you will need to Select the Rectangular Plot and place it within the Window.
+>
+>    ![PMOS R_Plot](Images/Plot_PMOS_SIM.png)
+>
+>    Before it can be placed, the Plot Traces & Attributes Window will open. You will want to Select the Drain Current Probe *I0.i* and then Click "*>>Add Vs..>>*" to which another window will open. In the *Select Independent Variable* Window, you will need to Select "*VDS*" and Click *OK*. **NOTE:** Your Drain Current Varable may not be "*I0.i*" depending if you changed the name of your Current Probe within the Schematic.
+>
+>    ![PMOS Plot Trace](Images/Plot_Traces_PMOS.png)
+>
+>    You will see a plot for I_D vs VDS for different values of VGS. If you have the same results below then you are finished with the PMOS Simulaton
+>
+>    ![PMOS Curve](Images/plot_pmos_IvsVDS.png)
 
 [^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
 [^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
