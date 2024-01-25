@@ -228,41 +228,36 @@ Now that we have created two models for the EKV MOSFET, we will want to verify t
 2. Now that we have everything we need, let's put everything together and add assign values.
 > 1. Below is how your Schematic should look like. Notice for the *DC* and *Parameter Sweep* you will need double quotes around your variables. The VAR Component holds the starting values of *VGS* and *VDS*. Notice I changed my variable name for the current to "*I0*" but this is not required.
 > 
->    ![p6](Images/nmos_sim_1.png)
+>    ![NMOS Simulation Schematic](Images/nmos_sim_1.png)
+
+3. With the Components tied together and ready for simulation, let's plot the Drain Current versus the Drain-to-Source Voltage.
+> 1. Click the Simulate Tool located on the top ribbon
+>
+>    ![Simulate](Images/Simulate.png)
+>
+>    After a couple of seconds, you will see 2 Windows open. As long as ther are no error messages or warnings, you may ignore the Logging Window. We will instead focus on the second window to plot our graph.
+>
+> 2. On the left in the Palette, you will need to Select the Rectangular Plot and place it within the Window.
+>
+>    ![NMOS R_Plot](Images/Plot_NMOS_SIM.png)
+>
+>    Before it can be placed, the Plot Traces & Attributes Window will open. You will want to Select the Drain Current Probe *I0.i* and then Click "*>>Add Vs..>>*" to which another window will open. In the *Select Independent Variable* Window, you will need to Select "*VDS*" and Click *OK*. **NOTE:** Your Drain Current Varable may not be "*I0.i*" depending if you changed the name of your Current Probe within the Schematic.
+>
+>    ![NMOS Plot Trace](Images/Plot_Traces_NMOS.png)
+>
+>    You will see a plot for I_D vs VDS for different values of VGS. If you have the same results below then you are finished with the NMOS Simulaton
+>
+>    ![NMOS Curve](Images/plot_nmos_IvsVDS.png)
 
 
 
-
-
-In order to simulate our models, we will need to create a new cell. Create a new schematic and in the cell box, rename your cell to "nmos_ekv_va_SIM"
-In the schematic view, navigate to the Component Library Icon and under Workspace Libraries you will need to choose "nmos_ekv_va". Place the model in the schematic.
-
-Next you will need to add the following components shown in the figure below. All required variables are displayed.
-
-%% show sim layout of nmos %%
-
-![p5](Images/pmos_sim_1.png)
-
-Once your simulation schematic looks like the one shown, you will need to complete one more step. Currently, the nmos schematic you placed down is an instance. This means you will need to reference the model before simulation.
-Select the nmos instance on the schematic and Choose View for Simulation from the top ribbon. You will need to choose the veriloga file to use for simulation.
-
-Your schematic should now have the text "veriloga" above the nmos if done correctly as shown below.
-
-%% nmos simulation veriloga %%
-
-![p6](Images/nmos_sim_1.png)
-
-
-Save and click simulate. You will want to plot the Drain Current vs the Voltage from Drain to Source (i.e. I_D vs V_DS)
-
-%% show curve for nmos %%
-
-![p7](Images/plot_nmos_IvsVDS.png)
 
 ## P-Type MOSFET Simulation
 We will do the same for the pmos simulation, rename your cell accordingly and replicate the schematic simulation below.
 
 %% schematic for pmos simulaiton %%
+
+![p5](Images/pmos_sim_1.png)
 
 ![p8](Images/plot_pmos_IvsVDS.png)
 
