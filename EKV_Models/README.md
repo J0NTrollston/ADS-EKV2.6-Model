@@ -201,16 +201,6 @@ We will do the same for the pmos simulation, rename your cell accordingly and re
 ![p8](Images/plot_pmos_IvsVDS.png)
 
 
-# Creating a simple Inverter
-## Create Inverter Schematic
-## Simulate Inverter section
-Later, I will add this section for the CMOS inverter using both models that we created. 
-
-![p9](Images/CMOS_Inverter_Schematic.png)
-
-![p9](Images/CMOS_Inverter_VoutVsVin.png)
-
-
 
 [^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
 [^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
