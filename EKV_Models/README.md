@@ -166,8 +166,74 @@ Using the FOSS EKV Model[^2] Verilog-A code, I started off with their default va
 |	GAMMA	|		|	x	|	xd_cjswg	|		|		|	Altium[^4]	|	RSH	|		|	x	|	tp_njtsswg	|	x	|		|		|
 
 # Simulation of the Models
+Now that we have created two models for the EKV MOSFET, we will want to verify they work correctly when simulating a circuit. For this section we will go over using the newly created models in their own simulation to show the characteristic curves we'd expect a MOSFET to have.
 
 ## N-Type MOSFET Simulation
+1. In the same workspace where we created our models, you will want to create a new cell to simulate the N-Type MOSFET Model.
+> 1. In the workspace window, navigate to *File* -> *New* -> *Schematic* and in the New Schematic Window you will want to name the cell "*nmos_ekv_va_SIM*"
+>
+>    ![New Schematic](Images/New_Schematic.png) 
+
+2. When the Schematic opens, we will need to place down our NMOS Model with simulation components.
+> 1. Click on the Display Component Library List on the top ribbon to grab the NMOS Model.
+>
+>    ![Display Component Library List](Images/Display_Component_Library_List.png)
+>
+>    This will open a Component Library Window which will have all of your libraries available in your Workspace. On the left, you will see a dropdown menu called *All Libraries*. If not already expanded, open this dropdown menu and Click on *Workspace Libraries*.
+>    To the right you will see the models create earier. Double Click on the Component called *nmos_ekv_va* and place it down within the Schematic.
+>
+> 2. Now we will use the Palette to grab some needed simulation components. First grab the Current Probe by searching in the Probe Component Palette.
+>
+>    ![Current Probe](Images/Probe_Components.png)
+>
+>    You will see the first component called *I_Probe*, go ahead and select this and place it down.
+>    
+>    ![I Probe](Images/I_Probe.png)
+>    
+> 3. Go to the *Sources-Freq Domain* Palette and grab the 2 *V_DC* Components.
+>
+>    ![Sources-Freq Domain](Images/Sources_Freq_Domain.png)
+>
+> 4. Go to the *Simulation-DC* Palette and grab the *D C* and the *Prm Swp* Components.
+>
+>    ![DC Simulation](Images/DC_Simulation.png)
+>
+>    After you placed both Components, Double Click the DC Component and Open the Display Tab. Here is where you can choose what parameters are displayed on the Schematic. Choose *SweepVar*, *Start*, *Stop* and *Step*.
+>
+>    ![DC Display](Images/DC_Display.png)
+>
+>    Click *OK*
+>
+> 6. There are some other items that we will need such as the *Ground* and *VAR* Components.
+>    You will need one *Ground* Component
+>    
+>    ![Ground Component](Images/Ground_Component.png)
+>
+>    And you will need one *VAR* Component
+>
+>    ![VAR Component](Images/VAR_Component.png)
+>
+> 7. Now to connect these Components together, you will need to use the Wire Tool
+>    This will be on the top ribbon next to the VAR and Ground Components used.
+>    
+>    ![Wire Tool](Images/Wire_Tool.png)
+>
+> 8. Before we are ready to put components all together, we need to choose the view for simulating our MOSFET.
+>    Select the NMOS Model within the Schematic and on the top ribbon you will need to Click *View For Simulation*.
+>
+>    ![View For Simulation](Images/View_For_Simulation.png)
+>
+>    When the Simulation View Window pops up, you will want to Select the *veriloga* View. This is how we tie the Model we created to our Instance within the Schematic. Once selected, you will see the text "*veriloga*" on top of the NMOS Instance.
+
+2. Now that we have everything we need, let's put everything together and add assign values.
+> 1. Below is how your Schematic should look like. Notice for the *DC* and *Parameter Sweep* you will need double quotes around your variables. The VAR Component holds the starting values of *VGS* and *VDS*. Notice I changed my variable name for the current to "*I0*" but this is not required.
+> 
+>    ![p6](Images/nmos_sim_1.png)
+
+
+
+
+
 In order to simulate our models, we will need to create a new cell. Create a new schematic and in the cell box, rename your cell to "nmos_ekv_va_SIM"
 In the schematic view, navigate to the Component Library Icon and under Workspace Libraries you will need to choose "nmos_ekv_va". Place the model in the schematic.
 
