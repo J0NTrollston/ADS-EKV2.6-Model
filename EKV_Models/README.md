@@ -1,6 +1,27 @@
 # Advanced Design System (ADS) EKV v2.6 Model Tutorial
 This tutorial will serve as an introduction to implementing the EKV v2.6 Model into ADS. We will be using the CMOS 0.5um Parameter Set found on the EFPL website.[^1]
 
+## Table of Contents
+
+[Background](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#background)
+
+[Creating the EKV Model in ADS](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#creating-the-ekv-model-in-ads)
+
+* [N-Type MOSFET Model](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#n-type-mosfet-model)
+
+* [P-Type MOSFET Model](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#p-type-mosfet-model)
+
+[What about the values used in the Models?](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#what-about-the-values-used-in-the-models)
+
+[Simulation of the Models](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#simulation-of-the-models)
+
+* [N-Type MOSFET Simulation](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#n-type-mosfet-simulation)
+
+* [P-Type MOSFET Simulation](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#p-type-mosfet-simulation)
+
+[References](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/EKV_Models#references)
+
+
 ## Background
 There are not many full tutorials accessable online on how to use the EKV Model within ADS, those that can be found don't provide additional information on how parameter values were obtained. This tutorial should help the reader to understand how to implement their own models using Verilog-A in detail. There is a useful GitHub Repository where I was able to grab the Verilog-A code for the EKV Model.[^2] Although this repository that holds the Verilog-A code is very useful and the only publicly available code I could find for the EKV Model, it does not use any of the official parameter sets found on EFPL's website[^3] and does not specify other information regarding using the Model. Thus, taking their Verilog-A code and switching out the parameters for the half micron parameter set, I was able to simulate models for both the NMOS and PMOS devices. 
 
