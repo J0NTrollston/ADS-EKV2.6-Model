@@ -196,7 +196,7 @@ Now that we have created two models for the EKV MOSFET, we will want to verify t
 >
 > 4. Go to the *Simulation-DC* Palette and grab the *D C* and the *Prm Swp* Components.
 >
->    ![DC Simulation](Images/DC_Simulation.png)
+>    ![DC Simulation](Images/Simulation_DC.png)
 >
 >    After you placed both Components, Double Click the DC Component and Open the Display Tab. Here is where you can choose what parameters are displayed on the Schematic. Choose *SweepVar*, *Start*, *Stop* and *Step*.
 >
