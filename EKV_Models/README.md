@@ -40,7 +40,7 @@ This section will contain information on how to build the NMOS and PMOS model wi
 >
 > 2. Name the cell "*nmos_ekv_va*" and click *OK*
 >
-> 3. Once the Verilog-A file is created unde the cell named *nmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A NMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/nmos/nmos_ekv_va.va) into the Verilog-A file. Save and Exit.
+> 3. Once the Verilog-A file is created unde the cell named *nmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A NMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/EKV_Models/nmos/nmos_ekv_va.va) into the Verilog-A file. Save and Exit.
 
 3. Next, we will create a Schematic under the *nmos_ekv_va* cell.
 > 1. Right Click on the *nmos_ekv_va* cell and choose "*New Schematic*"
@@ -109,7 +109,7 @@ Creating the P-Type Model will be mostly the same steps.
 >
 > 2. Name the cell "*pmos_ekv_va*" and click *OK*
 >
-> 3. Once the Verilog-A file is created unde the cell named *pmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A PMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/0.5um_CMOS_Parameters/pmos/pmos_ekv_va.va) into the Verilog-A file. Save and Exit.
+> 3. Once the Verilog-A file is created unde the cell named *pmos_ekv_va*, the file should open with template code. Remove the template code in the file and paste the [Verilog-A PMOS Code](https://github.com/J0NTrollston/ADS-EKV2.6-Model/blob/main/EKV_Models/pmos/pmos_ekv_va.va) into the Verilog-A file. Save and Exit.
 
 3. Next, we will create a Schematic under the *pmos_ekv_va* cell.
 > 1. Right Click on the *pmos_ekv_va* cell and choose "*New Schematic*"
