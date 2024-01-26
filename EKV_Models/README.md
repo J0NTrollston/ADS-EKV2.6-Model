@@ -1,5 +1,5 @@
 # Advanced Design System (ADS) EKV v2.6 Model Tutorial
-This tutorial will serve as an introduction to implementing the EKV v2.6 Model into ADS. We will be using the CMOS 0.5um Parameter Set found on the EFPL website.[^1]
+This tutorial will serve as an introduction to implementing the EKV v2.6 Model into ADS. We will be using the CMOS 0.5um Parameter Set found on the EFPL website.[^1] If you would like to follow this process through a video instead, it will be available on [YouTube](https://youtu.be/hbRe1-M6-X4).
 
 ## Table of Contents
 
