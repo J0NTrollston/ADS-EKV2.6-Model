@@ -2,6 +2,7 @@
 
 # Advanced Design System (ADS) EKV v2.6 Model Tutorial
 This tutorial will serve as an introduction to implementing the EKV v2.6 Model into ADS. We will be using the CMOS 0.5um Parameter Set found on the EFPL website.[^1]
+Tutorial on [YouTube](https://youtu.be/B8LCLi1V34s)
 
 # Creating a simple Inverter
 ## Create Inverter Schematic
