@@ -41,20 +41,19 @@ By using the previous NMOS and PMOS Models created using the Verilog-A code, we 
 >    ![VAR Component](Images/VAR_Component.png)
 
 4. Now that we have the components requred, we will need to put them together.
-> 1. 
-![p9](Images/CMOS_Inverter_Schematic.png)
+> 1. Using the Wire Tool, connect the components as seen below. Notice that the connection wire between the two models has been given the name "*Vout*" to make it easier when displaying the voltage later. To name a connection, use the Name Tool in the same ribbon where the Wire Tool can be found.
+>    
+>   ![CMOS Inverter Schematic](Images/CMOS_Inverter_Schematic.png)
+>
+>   Once you have verified that your schematic has the same values as seen above, go ahead and save the Schematic and move on to simulating your design.
 
 ## Simulate Inverter section
-Later, I will add this section for the CMOS inverter using both models that we created. 
-
-
-
-![p9](Images/CMOS_Inverter_VoutVsVin.png)
-
-
-
-[^1]: [EFPL CMOS 0.5um Parameter Set](https://www.epfl.ch/labs/iclab/ekv/verilog-a/0_5um_cmos_par/)
-[^2]: [GitHub FOSS EKVv2.6](https://github.com/ekv26/model)
-[^3]: [EFPL EKV Examples](https://www.epfl.ch/labs/iclab/ekv/verilog-a/)
-[^4]: [Altium Parameter Reference](https://techdocs.altium.com/display/AMSE/Metal+Oxide+Semiconductor+Field-Effect+Transistor+(MOSFET)+Model)
-[^5]: [GMIN parameter](https://web.eece.maine.edu/~hummels/classes/ece342/docs/simetrix_simulatorreference.pdf)
+1. Let's plot the voltage out versus voltage from the gate.
+> 1. Click the Simulate Tool located on the top ribbon
+>
+>    ![Simulate Tool](Images/Simulate.png)
+>
+>    After a couple of seconds, you will see 2 Windows open. As long as ther are no error messages or warnings, you may ignore the Logging Window. We will instead focus on the second window to plot our graph.
+> 3. On the left in the Palette, you will need to Select the Rectangular Plot and place it within the Window. Before it can be placed, the Plot Traces & Attributes Window will open. You will want to Select the VGS and then Click ">>Add Vs..>>" to which another window will open. In the Select Independent Variable Window, you will need to Select "Vout" and Click OK. You will see the VGS vs Vout for the EKV Inverter. 
+>
+>    ![CMOS Inverter Graph](Images/CMOS_Inverter_VoutVsVin.png)
