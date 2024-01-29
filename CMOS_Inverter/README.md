@@ -55,7 +55,7 @@ By using the previous NMOS and PMOS Models created using the Verilog-A code, we 
 >
 >   Once you have verified that your schematic has the same values as seen above, go ahead and save the Schematic and move on to simulating your design.
 
-## Simulate Inverter section
+## Simulate Inverter
 1. Let's plot the voltage out versus voltage from the gate.
 > 1. Click the Simulate Tool located on the top ribbon
 >
