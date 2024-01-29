@@ -3,6 +3,14 @@
 # Advanced Design System (ADS) CMOS Inverter Tutorial
 Building off from the previous tutorial showing how to create the [EKV MOSFET Model](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/dd347d0c8e608031fab5bb2bc43bb72b4c067ee1/EKV_Models), we will go over how to create the CMOS Inverter and simulate it within You can also follow the steps through the tutorial on [YouTube](https://youtu.be/B8LCLi1V34s).
 
+## Table of Contents
+
+[Creating a simple Inverter](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/CMOS_Inverter#creating-a-simple-inverter)
+
+* [Create Inverter Schematic](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/CMOS_Inverter#create-inverter-schematic)
+
+[Simulate Inverter section](https://github.com/J0NTrollston/ADS-EKV2.6-Model/tree/main/CMOS_Inverter#simulate-inverter)
+
 # Creating a simple Inverter
 By using the previous NMOS and PMOS Models created using the Verilog-A code, we will create the CMOS Inverter in the ADS Schematic. 
 
