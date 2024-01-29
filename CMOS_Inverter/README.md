@@ -8,8 +8,8 @@ By using the previous NMOS and PMOS Models created using the Verilog-A code, we 
 
 ## Create Inverter Schematic
 1. In the same Workspace that you created the EKV Models, you will want to create a new Schematic. You can do this by Clicking *File* and navigating to *Schematic*
-
-![New schematic](Images/New_Schematic.png)
+>
+>    ![New schematic](Images/New_Schematic.png)
 
 2. Pull the NMOS and PMOS Models and place them into the Schematic
 > 1. Click on the Display Component Library List on the top ribbon to grab the Models.
